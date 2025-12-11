@@ -1,0 +1,47 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    controllerName="basic.controller.View1"
+>
+    <Bar>
+        <contentRight>
+            <Button text="Add" icon="sap-icon://add" press="onPressAdd"/>
+        </contentRight>
+    </Bar>
+    <HBox>
+        <Table
+            id="booksTable"
+            items="{/Books}"
+        >
+            <columns>
+                <Column>
+                    <Text text="ID" />
+                </Column>
+                <Column>
+                    <Text text="Title" />
+                </Column>
+                <Column>
+                    <Text text="Author" />
+                </Column>
+                <Column>
+                    <Text text="Stock" />
+                </Column>
+                <Column>
+                    <Text text="Price" />
+                </Column>
+            </columns>
+
+            <items>
+                <ColumnListItem>
+                    <cells>
+                        <Text text="{ID}" />
+                        <Text text="{title}" />
+                        <Text text="{author}" />
+                        <Text text="{stock}" />
+                        <Text text="{price}" />
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+    </HBox>
+</mvc:View>
